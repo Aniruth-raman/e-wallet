@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Main class for Wallet Service
  */
 @SpringBootApplication
-public class WalletService {
+public class WalletApplication {
     public static void main(String[] args) {
-        SpringApplication.run(WalletService.class, args);
+        SpringApplication.run(WalletApplication.class, args);
     }
 }
