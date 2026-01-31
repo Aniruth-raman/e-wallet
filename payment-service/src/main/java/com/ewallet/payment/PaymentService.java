@@ -1,10 +1,14 @@
 package com.ewallet.payment;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Main class for Payment Service
  */
+@SpringBootApplication
 public class PaymentService {
     public static void main(String[] args) {
-        System.out.println("Payment Service is running...");
+        SpringApplication.run(PaymentService.class, args);
     }
 }
