@@ -9,7 +9,7 @@ import com.ewallet.payment.exception.InsufficientFundException;
 import com.ewallet.payment.exception.ServiceUnavailableException;
 import com.ewallet.payment.model.Ledger;
 import com.ewallet.payment.repository.LedgerRepository;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-@Log4j2
+@Slf4j
 public class PaymentService {
 
     @Autowired
