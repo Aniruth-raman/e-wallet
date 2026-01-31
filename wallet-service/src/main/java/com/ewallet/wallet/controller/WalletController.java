@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Sample REST controller for Wallet Service
  */
 @RestController
-@RequestMapping("/api/wallet")
+@RequestMapping("/api/v1/wallet")
 public class WalletController {
 
     @GetMapping("/status")
