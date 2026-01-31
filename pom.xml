@@ -22,7 +22,7 @@
 
     <modules>
         <module>wallet-service</module>
-        <module>payment-service</module>
+        <module>payment</module>
         <module>notification-service</module>
     </modules>
 
