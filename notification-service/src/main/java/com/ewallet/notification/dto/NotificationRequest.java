@@ -3,16 +3,17 @@ package com.ewallet.notification.dto;
 
 public class NotificationRequest {
 	
-    private String recipientEmail;
+    private String userId;
     private Double amount;
     private String transactionStatus;
     private String message;
     
-	public String getRecipientEmail() {
-		return recipientEmail;
+	
+	public String getUserId() {
+		return userId;
 	}
-	public void setRecipientEmail(String recipientEmail) {
-		this.recipientEmail = recipientEmail;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public Double getAmount() {
 		return amount;

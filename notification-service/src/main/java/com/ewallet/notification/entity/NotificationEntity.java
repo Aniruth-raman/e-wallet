@@ -20,13 +20,13 @@ public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String recipientEmail;
+    private String userId;
     private Double amount;
     private String transactionStatus;
     private String message;
 
     public NotificationEntity(NotificationRequest request) {
-        this.recipientEmail = request.getRecipientEmail();
+        this.userId = request.getUserId();
         this.amount = request.getAmount();
         this.transactionStatus = request.getTransactionStatus();
         this.message = request.getMessage();
