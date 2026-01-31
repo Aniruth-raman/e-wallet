@@ -18,11 +18,7 @@ public interface WalletRepository extends JpaRepository<Wallet, String> {
 	 */
 	@Query("SELECT COALESCE(SUM(CASE WHEN wt.tranType = 'C' THEN wt.amount "
 			+ "WHEN wt.tranType = 'D' THEN -wt.amount END), 0) "
-<<<<<<< HEAD
-			+ "FROM WalletTransaction wt WHERE wt.walletAccNo = :walletAccNo")
-=======
 			+ "FROM Wallet wt WHERE wt.walletAccNo = :walletAccNo")
->>>>>>> 97ca1f4 (commit 2)
 	BigDecimal checkBalance(String walletAccNo);
 
 	/**

@@ -21,9 +21,9 @@
     <description>Parent POM for E-Wallet multi-module project</description>
 
     <modules>
-        <module>wallet-service</module>
+        <module>wallet</module>
         <module>payment</module>
-        <module>notification-service</module>
+        <module>notification</module>
     </modules>
 
     <properties>
