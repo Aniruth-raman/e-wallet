@@ -121,7 +121,7 @@ public class MerchantService {
                 .findByTransactionId(request.getTransactionId())
                 .orElseThrow(() -> new TransactionNotFoundException(request.getTransactionId()));
         
-        if (existingTransaction.getType() != TransactionType.CREDIT) {
+        if (!existingTransaction.getType().equals(TransactionType.CREDIT)) {
             throw new IllegalArgumentException("Can only debit a credit transaction");
         }
         
