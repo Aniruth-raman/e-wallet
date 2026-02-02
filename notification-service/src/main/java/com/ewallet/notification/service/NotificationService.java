@@ -64,8 +64,15 @@ public class NotificationService {
             
             // Send email asynchronously
             UUID notificationId = notification.getId();
-            sendEmailAsync(notification)
-                .thenAccept(success -> handleEmailResult(notificationId, success, action));
+            CompletableFuture<Boolean> emailFuture = emailService.sendEmail(
+                notification.getRecipientEmail(),
+                notification.getSubject(),
+                notification.getMessage()
+            );
+            
+            if (emailFuture != null) {
+                emailFuture.thenAccept(success -> handleEmailResult(notificationId, success, action));
+            }
             
             return NotificationResponse.builder()
                 .notificationId(notification.getId())
