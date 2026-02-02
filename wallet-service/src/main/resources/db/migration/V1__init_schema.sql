@@ -13,7 +13,7 @@ CREATE TABLE wallets (
     customer_id UUID NOT NULL REFERENCES customers(id),
     account_number VARCHAR(50) NOT NULL UNIQUE,
     balance NUMERIC(19, 4) NOT NULL DEFAULT 0,
-    currency VARCHAR(10) NOT NULL,
+    currency VARCHAR(10) NOT NULL CHECK (currency IN ('USD', 'EUR', 'INR')),
     version BIGINT NOT NULL DEFAULT 0,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

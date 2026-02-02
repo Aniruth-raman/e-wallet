@@ -52,7 +52,7 @@ public class WalletService {
                 .orElseThrow(() -> new WalletNotFoundException(
                         "Wallet not found for customer ID: " + request.getCustomerId()));
 
-        if (!wallet.getCurrency().equals(request.getCurrency())) {
+        if (wallet.getCurrency() != request.getCurrency()) {
             throw new InvalidCurrencyException(
                     "Currency mismatch. Wallet currency: " + wallet.getCurrency() + 
                     ", Requested currency: " + request.getCurrency());
@@ -82,7 +82,7 @@ public class WalletService {
                     .orElseThrow(() -> new WalletNotFoundException(
                             "Wallet not found for customer ID: " + request.getCustomerId()));
 
-            if (!wallet.getCurrency().equals(request.getCurrency())) {
+            if (wallet.getCurrency() != request.getCurrency()) {
                 throw new InvalidCurrencyException(
                         "Currency mismatch. Wallet currency: " + wallet.getCurrency() + 
                         ", Requested currency: " + request.getCurrency());
