@@ -5,13 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class NotificationRequest {
-    private String recipient;
-    private String type;
-    private String subject;
-    private String message;
+public class MerchantCreditRequest {
+    private String merchantId;
+    private BigDecimal amount;
+    private String transactionId;
 }

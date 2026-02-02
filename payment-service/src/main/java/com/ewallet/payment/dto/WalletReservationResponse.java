@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class NotificationRequest {
-    private String recipient;
-    private String type;
-    private String subject;
+public class WalletReservationResponse {
+    private String reservationId;
+    private String status;
     private String message;
 }
