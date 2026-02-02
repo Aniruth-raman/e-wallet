@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-gateway-test
+  
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+
+eureka:
+  client:
+    enabled: false
+
+jwt:
+  secret: e-wallet-super-secret-key-for-jwt-authentication-2024-minimum-256-bits
+  expiration: 86400000
+
+logging:
+  level:
+    root: INFO
+    com.ewallet.gateway: DEBUG
