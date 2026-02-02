@@ -57,11 +57,11 @@ feign:
       wallet-service:
         url: http://localhost:8081
       merchant-service:
-        url: http://localhost:8083
-      ledger-service:
         url: http://localhost:8084
-      notification-service:
+      ledger-service:
         url: http://localhost:8085
+      notification-service:
+        url: http://localhost:8083
 
 logging:
   level:
